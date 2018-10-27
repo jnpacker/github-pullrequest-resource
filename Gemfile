@@ -8,6 +8,7 @@ gem 'activesupport'
 gem 'faraday-http-cache'
 gem 'httpclient'
 gem 'octokit'
+#gem 'bigdecimal'
 
 group :development do
   gem 'pry'

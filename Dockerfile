@@ -10,6 +10,7 @@ RUN set -ex; \
   openssh-client \
   perl \
   ruby \
+  ruby-dev \
   ruby-json \
   ruby-bundler \
   ; \
@@ -33,7 +34,7 @@ RUN apk add --update \
     alpine-sdk
 
 COPY Gemfile Gemfile.lock /resource/
-
+RUN gem install bigdecimal -v '1.3.5' --no-rdoc --no-ri
 RUN cd /resource && bundle install
 
 COPY . /resource
